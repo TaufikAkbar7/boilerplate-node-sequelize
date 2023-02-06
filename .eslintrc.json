@@ -1,14 +1,27 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2021": true
-    },
-    "extends": ["eslint:recommended", "prettier"],
-    "overrides": [],
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "ignorePatterns": ["src/sequelize"],
-    "rules": {}
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "ignorePatterns": ["src/sequelize"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-plusplus": "off",
+    "no-process-exit": "off",
+    "class-methods-use-this": "off"
+  }
 }

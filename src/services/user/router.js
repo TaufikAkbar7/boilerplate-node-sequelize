@@ -1,12 +1,12 @@
-const express = require("express");
-const { signin, signup } = require("./controller");
-const { validationSignIn, validationSignUp } = require("./validations");
-const validate = require("../../helpers/validate");
+const express = require('express')
+const { signin, signup } = require('./controller')
+const { validationSignIn, validationSignUp } = require('./validations')
+const validate = require('../../helpers/validate')
 
-const router = express.Router();
-const basePath = "/users";
+const router = express.Router()
+const basePath = '/users'
 
-router.post(`${basePath}/sign_in`, validate(validationSignIn), signin);
-router.post(`${basePath}/sign_up`, validate(validationSignUp), signup);
+router.post(`${basePath}/sign_in`, validate(validationSignIn), signin)
+router.post(`${basePath}/sign_up`, validate(validationSignUp), signup)
 
-module.exports = router;
+module.exports = router
